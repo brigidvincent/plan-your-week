@@ -1,0 +1,79 @@
+.step-subtitle {
+    padding-bottom: 0.5em;
+    border-bottom: double #DDEDAA 3px;
+    margin-top:0.2em;
+}
+input {
+    background-color: #DDEDAA;
+    padding: 0.8em;
+    margin: 1em;
+    border-radius: 10px;
+    border: double #5E3023 3px;
+    min-width: 15em;
+    font-family: 'MyFont', monospace;
+    font-size: 0.7em;
+}
+.progress-btn{
+    font-size: 0.9em;
+    padding:0.4em;
+    margin: 1em;
+    margin-bottom: 0;
+    min-width: 5em;
+}
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+label {
+    width: 8em;
+    margin-right: 1em;
+}
+select {
+    background-color: #DDEDAA;
+    padding:0.8em;
+    margin: 1em;
+    border-radius: 10px;
+    border: double #5E3023 3px;
+    font-family: 'MyFont', monospace;
+    color:#5E3023;
+    font-size: 0.7em;
+    max-width: 13em;
+}
+.habit-btn {
+    padding: 0.3em;
+    min-width: 4em;
+    border-radius: 50px;
+    font-size: 0.8em;
+}
+ul {
+    list-style-type: none;
+    padding:0;
+}
+ul .habit-btn {
+    font-size: 0.8em;
+    margin: 0.4em;
+    float: right;
+}
+li {
+    font-size: 0.8em;
+    background-color: #DDEDAA;
+    color: #5E3023;
+    border: double #5E3023 3px;
+    padding: 0.5em;
+    margin: 1em;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 2em;
+}
+.multistep-container {
+    background-color: #5E3023;
+    color: #DDEDAA;
+    border: double #DDEDAA 4px;
+    padding: 1em;
+    min-width: 15em;
+    min-height: 15em;
+    max-width: 30em;
+    border-radius: 30px;
+    box-shadow: -1em 1em 10px #5E3023;
+}

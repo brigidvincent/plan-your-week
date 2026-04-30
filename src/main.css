@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./assets/Fonts/SpaceMono-Regular.ttf') format('truetype');
+}
+body {
+    font-family: 'MyFont',monospace;
+    color: #5E3023;
+    background-color: #DDEDAA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}

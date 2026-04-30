@@ -1,0 +1,18 @@
+.btn {
+    font-size: 1em;
+    font-family: 'MyFont', monospace;
+    background-color: #DDEDAA;
+    color: #5E3023;
+    transition: background-color 0.5s ease;
+    transition: transform 0.2s ease;
+    border: #5E3023 double 5px;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #5E3023;
+    border:#DDEDAA double 5px;
+    color: #DDEDAA;
+    cursor: pointer;
+}
