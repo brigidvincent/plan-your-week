@@ -8,9 +8,10 @@ For now, just the basics...
 - React
 - Vite
 <br/>
+
 ## Features
 - Simple, pleasing colour scheme with dynamic buttons and page transitions
-- Sign-up page records user's habits and events they want to upkeep and attend respectively
+- Sign-up page records user's habits and events they want to upkeep and attend respectively.
 - **Coming soon... planner page! once user has signed-up/logged in, the planner will load with the following features:
 >> to-do list and habit "score" dial - showing % of tasks/habits done.
 >> checklist of today's habits
@@ -18,6 +19,7 @@ For now, just the basics...
 >> a word of the day! corner
 >> news reel?
 <br/>
+
 ## Running the Project
 - Clone the repository
 - Install dependencies: ```npm install```
@@ -28,6 +30,8 @@ For now, just the basics...
 - Run development server: ```npm run dev```
 - Open localhost in your browser
 <br/>
+
 ## Preview
 What it looks like now...
+
 
