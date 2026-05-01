@@ -12,7 +12,7 @@ For now, just the basics...
 ## Features
 - Simple, pleasing colour scheme with dynamic buttons and page transitions
 - Sign-up page records user's habits and events they want to upkeep and attend respectively.
-- **Coming soon... planner page! once user has signed-up/logged in, the planner will load with the following features:**
+- *Coming soon... planner page! once user has signed-up/logged in, the planner will load with the following features:*
 
   - to-do list and habit "score" dial - showing % of tasks/habits done.
   - checklist of today's habits
