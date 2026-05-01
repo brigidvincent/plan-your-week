@@ -31,5 +31,6 @@ For now, just the basics...
 
 ## Preview
 What it looks like now...
+![Weekly Planner Demo](./demo.gif)
 
 
