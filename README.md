@@ -33,6 +33,7 @@ For now, just the basics...
 
 ## Preview
 What it looks like now...
+<br/>
 ![Weekly Planner Demo](./demo.gif)
 
 
