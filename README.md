@@ -8,10 +8,12 @@ For now, just the basics...
 - React
 - Vite
 <br/>
+
 ## Features
 - Simple, pleasing colour scheme with dynamic buttons and page transitions
 - Sign-up page records user's habits and events they want to upkeep and attend respectively.
 - **Coming soon... planner page! once user has signed-up/logged in, the planner will load with the following features:**
+
   - to-do list and habit "score" dial - showing % of tasks/habits done.
   - checklist of today's habits
   - day "cards" displaying upcoming events or to-do lists for the specified day
