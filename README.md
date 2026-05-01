@@ -7,7 +7,6 @@ For now, just the basics...
 ## Technologies
 - React
 - Vite
-<br/>
 
 ## Features
 - Simple, pleasing colour scheme with dynamic buttons and page transitions
@@ -19,7 +18,6 @@ For now, just the basics...
   - day "cards" displaying upcoming events or to-do lists for the specified day
   - a word of the day! 
   - news reel?
-<br/>
 
 ## Running the Project
 - Clone the repository
@@ -30,7 +28,6 @@ For now, just the basics...
   - react-router-dom
 - Run development server: ```npm run dev```
 - Open localhost in your browser
-<br/>
 
 ## Preview
 What it looks like now...
