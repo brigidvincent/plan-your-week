@@ -12,25 +12,106 @@
     padding: 0.6em;
     transition: transform 0.3s ease;
 }
-.calendar-day:hover {
-    transform: scale(1.1);
-}
+
 .day-header {
     font-size: 80%;
-    margin-bottom: 1em;
-    padding-bottom: 0.2em;
-    border-bottom: dashed #5E3023 1px;
+    margin-bottom: 0em;
+}
+.modal-overlay { 
+    position: fixed;
+    top: 0;
+    left:0 ;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3em;
+    color:#5E3023;
+    background: #ddedaa;
+    padding: 1em;
+    border-radius: 20px;
+    box-shadow: -0.5em 0.5em 10px black;
+    z-index: 1000; /* sits on top of overlay */
+}
+.discard-button, .save-button {
+    margin: 0.5em;
+    padding:0.5em;
+    transform: scale(0.9);
+}
+.modal-input {
+    color: #5E3023;
+    background-color:#f5f5f5
+}
+.event-card {
+    min-width: 1em;
+    font-size: 0.8em;
+    border: none;
+    padding: 0.3em;
+    margin: 0.2em;
+}
+
+.event-edit-button {
+    padding: 0.4em;
+    margin: 0.2em;
+    border: dashed #5E3023 1px;
+    font-size: 1em;
+}
+.event-edit-button:hover {
+    background-color: #5E3023;
+    border: dashed #ddedaa 1px;
+    color: #F5F5F5;
+    transform: scale(1);
 }
 .add-event-button {
-    padding: 0em 0.3em 0em 0.3em;
-    color: #F5F5F5;
-    background-color: #5E3023;
-    border: double #F5F5F5 0.3em;
+    padding-top: 0.05em;
+    padding-bottom: 0.05em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    border: dashed #5E3023 1px;
+    background-color: #f5f5f5;
+    color: #5e3023;
+    margin: 0.3em;
 }
 .add-event-button:hover {
-    color: #087E8B;
-    border: double #087E8B 0.3em;
-    transform: none;
+    background-color: #5E3023;
+    border: dashed #f5f5f5 1px;
+    color: #f5f5f5;
+    transform: scale(1.1);
+}
+.no-events {
+    font-size: 0.7em;
+    font-style: italic;
+    color: #5E3023;
+    margin: 0.4em;
+}
+.dropdown-button {
     background-color: #F5F5F5;
+    min-width: 6em;
+    padding: 0.4em;
+    border: none;
+    border-radius: 0;
+}
+.dropdown-button:hover {
+    color: #5e3023;
+    background-color: #f5f5f5;
+    border: dashed #5E3023 1px;
+    border-radius: 15px;
+    transform: scale(1);
+}
+.expanded-event-title {
+    font-style: bold;
+    border-bottom: solid #5E3023 1px;
+    margin-bottom: 0.2em;
+}
+.event-info {
+    display:inline-block;
 }
 

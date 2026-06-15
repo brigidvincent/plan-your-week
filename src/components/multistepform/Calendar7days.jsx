@@ -13,6 +13,14 @@ function WeeklyCalendar() {
         time: "",
         location: ""
     });
+    const [expandedDay, setExpandedDay] = useState(null);
+
+    const toggleDay = (index) => {
+      setExpandedDay(prev => (prev === index ? null : index));
+    };
+
+    const [expandedEvent, setExpandedEvent] = useState(null);
+
     useEffect(() => {
         const today = new Date();
         const tempDays =[];
@@ -44,7 +52,7 @@ function WeeklyCalendar() {
         }
         const updatedEvents = {...events};
         const list = updatedEvents[selectedDay]
-        if (edtingEventIndex !== null){
+        if (editingEventIndex !== null){
             list[editingEventIndex] = tempEvent;
         } else {
             list.push(tempEvent);
@@ -65,11 +73,11 @@ function WeeklyCalendar() {
     }; //closes popup when edit is discarded
     
     return (
-  <div className="calendar-container">
-    <div className="calendar-grid">
-      {days.map((d, index) => {
-        const dateKey = d.toISOString().split("T")[0];
-        const readable = d.toLocaleDateString(undefined, {
+    <div className="calendar-container">
+      <div className="calendar-grid">
+        {days.map((d, index) => {
+          const dateKey = d.toISOString().split("T")[0];
+          const readable = d.toLocaleDateString(undefined, {
           weekday: "short",
           month: "short",
           day: "numeric"
@@ -77,30 +85,45 @@ function WeeklyCalendar() {
 
         return (
           <div key={index} className="calendar-day">
-            <div className="day-header">{readable}</div>
+            <div className="around-day">
 
-            {events[dateKey]?.map((ev, i) => (
-              <div key={i} className="event-card">
-                <div className="event-title">{ev.title}</div>
-                <div className="event-details">
-                  {ev.time} — {ev.location}
-                </div>
+            {/* The button to expand/collapse the day's events */}
+            <div className="day-header"><Button className="dropdown-button" onClick={() => toggleDay(index)}>
+              {readable}
+              <span>
+              {expandedDay === index ? " ▼" : " ▲"}</span>
+              </Button>
+            </div>
+            {/* expanded content*/}
+            {expandedDay === index && (
+              <>
+                <div className="events-list">
+                {events[dateKey]?.length === 0 && <p className="no-events">No events</p>}
 
+                {events[dateKey]?.map((ev, i) => (
+                  <div key={i} className="event-card">
+                    <div className="event-info">
+                        <div className="expanded-event-title">{ev.title}</div>
+                        <div>{ev.time} — {ev.location}</div>
+
+                        <Button
+                          className="event-edit-button"
+                          onClick={() => editEvent(dateKey, i)}>
+                            Edit
+                        </Button>
+                    </div>
+                  </div>
+                ))}
                 <Button
-                  className="event-edit-button"
-                  onClick={() => editEvent(dateKey, i)}
-                >
-                  Edit
-                </Button>
-              </div>
-            ))}
-
-            <Button
               className="add-event-button"
-              onClick={() => openModalForDay(dateKey)}
-            >
+              onClick={() => openModalForDay(dateKey)}>
               +
-            </Button>
+                </Button>
+                </div>
+              </>
+            )}
+
+          </div>
           </div>
         );
       })}

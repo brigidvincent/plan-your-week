@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import FadeIn from "../components/FadeIn";
 import "./styling/Signupstyles.css";
 import MultiStepForm from "../components/multistepform/MultiStepForm";
+import backArrow from "../assets/back-svgrepo-com.svg";
 
 function Signup() {
     const navigate = useNavigate();
@@ -20,10 +21,9 @@ function Signup() {
     >
       {/*above is the animation for the whole page, below is the content of the page */}
     <div className = "signup-page">
+        <button className="back-button" onClick={() => navigate("/")}><img className="icon" src={backArrow} alt="Back" /></button>
         <FadeIn delay={0.2}>
-        <header>
-            <h1>Let's get you set up!</h1>
-        </header>
+          <h1>Let's get you set up!</h1>
         </FadeIn>
         <FadeIn delay={0.4}>
           <div className="multistepform">

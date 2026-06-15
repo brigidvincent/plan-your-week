@@ -5,7 +5,7 @@ function Step3({ prevStep, handleChange, values, goToPlanner}){
     return (
         <div>
             <h3 className="step-subtitle"> Upcoming events </h3>
-            <h4> Fill in any events for this week: </h4>
+            <h4> Fill in any events for the next week: </h4>
             <div className="calendar">
                 <WeeklyCalendar/>
             </div>
